@@ -19,8 +19,7 @@ public class Facebook{
 		Workflow.loginToFacebook();
 	}
 
-//	@Test(dependsOnMethods={"facebookLogin"})
-	@Test
+	@Test(dependsOnMethods={"facebookLogin"})
 	public void addNewPost() {
 	    Workflow.postStatusMessage();	
 	}
