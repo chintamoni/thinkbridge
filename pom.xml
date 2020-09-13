@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com</groupId>
-	<artifactId>masglobal</artifactId>
+	<artifactId>thinkbridge</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>masglobal</name>
+	<name>thinkbridge</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -94,7 +94,23 @@
     <version>0.2.3</version>
 </dependency>
 
-
+<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>javax.mail-api</artifactId>
+			<version>1.5.5</version>
+		</dependency>
+ 
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>smtp</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+ 
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.6.0</version>
+		</dependency>
 
 	</dependencies>
 

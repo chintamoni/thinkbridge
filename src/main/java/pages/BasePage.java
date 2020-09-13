@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Properties;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -52,7 +51,7 @@ public class BasePage {
 	{
       Properties prop = new Properties();
 	  try {
-			  InputStream input = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/properties/masglobal.properties");
+			  InputStream input = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/properties/thinkbridge.properties");
           // load a properties file
           prop.load(input);
       } catch (IOException ex) {

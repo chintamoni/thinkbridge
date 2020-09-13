@@ -1,11 +1,6 @@
 package pages;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import utilities.Utils;
+import org.junit.Assert;
 
 public class Workflows extends DefinitionPage{
 	public static void openBrowser(String URL)
@@ -14,60 +9,64 @@ public class Workflows extends DefinitionPage{
 		launchBrowser(URL);
 	} 
 	
-	public static void isSearchFieldExists()
+	
+	public static void clickLanguageDropdown()
 	{
-		isSearchFieldPresent();
+		if(isLanguageDdnPresent())
+		{
+		clickLanguageDdn();
+		}
+		}
+	
+	public static void isLanguageOptionPresent(String lang1, String lang2)
+	
+	{
+		Assert.assertTrue(verifyLanguages(lang1));
+		Assert.assertTrue(verifyLanguages(lang2));
 	}
 	
-	public static void isHomePageDisplayed()
+public static void selectAnyLanguage(String lang1)
 	
 	{
-		verfiyHomePage();
-	}
-	
-	public static void specifySearchText(String searchText)
-	{
-		enterSearchText(searchText);
-	}
-	
-	public static void specifyAutoSearchText(String searchText)
-	{
-		enterAutoSearchText(searchText);
-	}
-	
-	public static void performSearch()
-	{
-		clickSearch();	
-	}
-	
-	public static String getUrlTitle()
-	{
-		return getTitle();
-	}
-	
-	public static void validateAutoSuggstOptions()
-	{
-		verifyAutoSuggesstedOptions();
-	}
-	
-	public static void clickFirstAutoSuggstOption()
-	{
-		clickAutoSuggesstedSearchText();
+	selectLanguage(lang1);
 	}
 
-	public static void openFirstWebSearchResult()
+public static void enterUsername(String uname)
+
+{
+	enterName(uname);
+}
+
+public static void enterOrgname(String oname)
+
+{
+	enterOrg(oname);
+}
+
+public static void enterUserEmail(String uemail)
+
+{
+	enterEmail(uemail);
+}
+
+public static void selectTermsAndCondition(String tc)
+
+{
+	selectAgreement(tc);
+}
+
+public static void clickOnSignUpButton()
+
+{
+	if(isSubmitButtonEnabled())
 	{
-		clickFirstMatchingRecord();
+		clickSubmit();
 	}
+}
 	
 	public static void waitBrowser(int time)
 	{
 		waitTillSeconds(time);
-	}
-	
-	public static void assertBookPage()
-	{
-		validateBookPage();
 	}
 	
 	public static void stopExecution()
